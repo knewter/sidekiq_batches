@@ -6,7 +6,7 @@ gem 'mechanize'
 source ENV["SIDEKIQ_SOURCE_URL"] do
   gem 'sidekiq-pro'
 end
-gem 'sinatra'
+gem 'sinatra', require: nil
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
