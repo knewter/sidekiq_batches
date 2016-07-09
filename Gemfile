@@ -3,6 +3,7 @@ ruby "2.3.0"
 
 gem 'pg'
 gem 'mechanize'
+gem 'sidekiq'
 source ENV["SIDEKIQ_SOURCE_URL"] do
   gem 'sidekiq-pro'
 end
