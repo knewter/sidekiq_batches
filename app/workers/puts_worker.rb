@@ -1,7 +1,8 @@
 class PutsWorker
   include Sidekiq::Worker
 
-  def perform
-    puts "zomg"
+  def perform(message)
+    puts message
+    sleep 10
   end
 end
