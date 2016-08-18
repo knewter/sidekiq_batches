@@ -3,5 +3,9 @@
     <%= label_tag :message, "Message" %>
     <%= text_field_tag(:message) %>
   </div>
+  <div>
+    <%= label_tag :allow_dupes, "Allow Dupes" %>
+    <%= check_box_tag(:allow_dupes) %>
+  </div>
   <%= submit_tag "Schedule work" %>
 <% end %>

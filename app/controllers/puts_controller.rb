@@ -4,7 +4,14 @@ class PutsController < ApplicationController
 
   def create
     sleep 1
-    PutsWorker.perform_async(params[:message])
+    worker =
+      if params[:allow_dupes] == "1"
+        PutsWorker.set(unique_for: false)
+      else
+        PutsWorker
+      end
+
+    worker.perform_async(params[:message])
     redirect_to root_path
   end
 end
